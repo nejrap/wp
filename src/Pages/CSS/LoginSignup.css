@@ -47,3 +47,14 @@ margin:0px;
     margin-top:20px;
     font-weight: 500px;
   }
+.loginsignup-login {
+    margin-top:20px;
+    color:#5c5c5c;
+    font-size:16px;
+    font-weight: 500px;
+}
+.loginsignup-login  span {
+    color: #e97777;
+    font-weight: 500;
+    text-decoration: underline;
+}
