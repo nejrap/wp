@@ -1,0 +1,39 @@
+.container {
+    background: white;
+    padding: 20px 50px;
+    text-align: center;
+    margin: 0 auto;
+  }
+  
+  .links {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap; /* Omogućuje prelazak elemenata u novi red ako nema dovoljno prostora */
+    gap: 20px; /* Ovo dodaje razmak između linkova */
+    justify-content: center; /* Centriranje elemenata horizontalno */
+  
+  }
+  
+.links li {
+  padding: 0;
+  margin: 0;
+  color: #E97777 !important; /* Dodajemo !important kako bi boja bila prioritetna */
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.2em;
+}
+
+.icons {
+    display: flex;
+    gap: 20px; /* Ovo dodaje razmak između ikona */
+    justify-content: center; /* Centriranje ikona horizontalno */
+    transform:scale(1.8);
+    color:#E97777
+  }
+  
+#footer {
+    margin-top: 20px; /* Ovo dodaje razmak između linkova/ikona i footera */
+    color:#E97777;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.1rem;
+  }
+

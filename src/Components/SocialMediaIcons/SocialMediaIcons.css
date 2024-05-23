@@ -1,0 +1,21 @@
+.socialMediaIcons a{
+    color:#E97777;
+    padding: 0;
+    margin: 0;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 1.2em;
+      
+}
+.icon-link {
+    color: #E97777;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.2em;
+  }
+.socialMediaIcons {
+    display: flex;
+    gap: 20px; /* Ovo dodaje razmak između ikona */
+    justify-content: center; /* Centriranje ikona horizontalno */
+    transform:scale(0.8);
+    color:#E97777
+}
+  

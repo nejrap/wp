@@ -1,0 +1,38 @@
+* {
+    box-sizing: border-box;
+}
+
+.galerija {
+    width: 80%;
+    margin: 100px auto 50px;
+    text-align: center;
+    padding-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 30px;
+    border: 1px solid #ccc; /* Dodajte obrub da bolje vidite okvir */
+    padding: 20px; /* Dodajte padding za razmak unutar okvira */
+    border-radius: 4px; /* Dodajte border-radius za zaobljene rubove */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Dodajte sjenku za bolje definisanje okvira */
+}
+
+.instagram-post {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 20px;
+    width: 100%;
+}
+
+.instagram-post img {
+    width: 250px;
+    height: 250px; /* Dodajte fiksnu visinu */
+    border-radius: 4px;
+    object-fit: cover; /* Osigurava da slika bude obrezana kako bi se uklopila u okvir */
+    transition: none; /* Uklanja efekt prelaska miša */
+}
+
+.instagram-post:hover img {
+    -ms-transform: none;
+    -webkit-transform: none;
+    transform: none;
+}

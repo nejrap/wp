@@ -1,0 +1,12 @@
+.item {
+    width: 350px;
+}
+.item p{
+    margin:6px 0px;
+    font-size:20px;
+    color:black;
+}
+.item-cijena{
+    display:flex;
+    gap:20px;
+}
