@@ -7,7 +7,7 @@ const Popular = () => {
     return (
         <div className="galerija">
             <div className="instagram-post">
-                {gallery_product.slice(0, 6).map((item, i) => {
+                {gallery_product.slice(0, 12).map((item, i) => {
                     return (
                         <Item 
                             key={i} 
