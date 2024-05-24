@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
+
+.image-row-container {
+    margin-bottom: 20px; /* Razmak ispod naslova i slika */
+}
+
+.image-row-title {
+    font-weight: 600;
+    font-size: 40px;
+    color: #E97777;
+    text-align: center;
+    font-family: 'Dancing Script', cursive; /* Uvjerite se da je font ispravno importan */
+    margin-bottom: 20px; /* Razmak ispod naslova */
+}
+
+.image-row {
+    display: flex;
+    justify-content: center; /* Centriraj slike horizontalno */
+    gap: 10px; /* Dodaj razmak između slika */
+    flex-wrap: wrap; /* Omogućava prelazak slika u novi red ako nema dovoljno prostora */
+}
+
+.image {
+    width: calc(25% - 20px); /* Širina slike je 25% širine kontejnera minus razmak */
+    height: auto;
+}
