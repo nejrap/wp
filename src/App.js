@@ -1,38 +1,30 @@
-/* eslint-disable react/jsx-no-undef */
-
-import './App.css';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './Components/Navbar/Navbar';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import About from './Pages/About';
-import Contact from './Pages/Contact';
-import Cart from './Pages/Cart';
-import LoginSignup from './Pages/LoginSignup';
-
-import Shop from './Pages/Shop';
-
 import Footer from './Components/Footer/Footer';
-function App() {
-  return (
-    <div>
-      <BrowserRouter>
-      <Navbar/>
-      <Routes>
-        
-        <Route path='/about' element={<About/>}/>
-        <Route path='/contact' element={<Contact/>}/>
-        <Route path='/shop' element={<Shop/>}/>
-      
-        <Route path='/cart' element={<Cart/>}/>
-        <Route path='/login' element={<LoginSignup/>}/>
+import About from './Pages/About';
+import Shop from './Pages/Shop';
+import Home from './Pages/Home';
+import DetailPage from './Pages/DetailPage';
+import Contact from './Pages/Contact';
 
 
-     
-      </Routes>
-      <Footer/>
-
-  </BrowserRouter>
-    </div>
-  );
-}
+const App = () => {
+    return (
+        <Router>
+            <div className="app">
+                <Navbar />
+                <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/about" element={<About />} />
+                    <Route path="/contact" element={<Contact />} />
+                    <Route path="/shop" element={<Shop />} />
+                    <Route path="/details/:id" element={<DetailPage />} />
+                </Routes>
+                
+            </div>
+        </Router>
+    );
+};
 
 export default App;

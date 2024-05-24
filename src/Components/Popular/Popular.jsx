@@ -1,6 +1,6 @@
-import React from "react";
-import gallery_product from "../Assets/data";
-import Item from "../Item/Item";
+import React from 'react';
+import gallery_product from '../Assets/data';
+import Item from '../Item/Item';
 import './Popular.css';
 
 const Popular = () => {

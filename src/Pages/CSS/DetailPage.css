@@ -1,0 +1,19 @@
+.detail-page {
+    padding: 20px;
+    text-align: center;
+}
+
+.detail-page img {
+    max-width: 100%;
+    height: auto;
+}
+
+.detail-page h1 {
+    margin-top: 20px;
+    font-size: 2em;
+}
+
+.detail-page p {
+    margin-top: 10px;
+    font-size: 1.2em;
+}
