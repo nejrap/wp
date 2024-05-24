@@ -12,9 +12,10 @@ form {
 
 }
 form h1 {
+    color:#E97777;
     font-weight: 600;
     font-size: 50px;
-    color:#E97777;
+    
     text-align: center;
     font-family:'Dancing Script';
     margin-top: -150px;

@@ -55,6 +55,7 @@
     font-weight: 500;
     cursor: pointer;
     background:#E9967A;
+    margin-bottom: 34px;
   }
   .login-cart button:active{
     background: white;

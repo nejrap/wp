@@ -1,3 +1,5 @@
+/* Ad.css */
+
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
 
 .image-row-container {
@@ -23,4 +25,9 @@
 .image {
     width: calc(25% - 20px); /* Širina slike je 25% širine kontejnera minus razmak */
     height: auto;
+    transition: transform 0.3s ease; /* Dodaj tranziciju za glatki prelaz */
+}
+
+.image:hover {
+    transform: scale(1.1); /* Povećaj sliku kada je miš iznad nje */
 }

@@ -1,7 +1,7 @@
-.container h1 {
+.container-login h1 {
 font-weight: 600;
 font-size: 50px;
-color:#E97777;
+color:black !important;
 text-align: center;
 font-family:'Dancing Script';
 margin:0px;
@@ -11,8 +11,10 @@ margin:0px;
     height: 80vh;
     background: white;
     padding-top: 20px;
+    color:black;
+    text-align: center;
 }
-.container {
+.container-login {
     width: 400px;
     height: 400px;
     background: #E97777;
@@ -35,15 +37,15 @@ margin:0px;
     font-size:12px;
     border-radius: 10px;
 }
-.container button {
-    background: #e97777;
+.container-login button {
+    background: white;
     border: 2px solid #e97777;
-    color:white;
+    color:#e97777;
     border-radius: 30px;
     padding: 10px 30px;
     font-size: 18px;
     cursor: pointer;
-    margin-left: 30px;
+    margin-left: 50px;
     margin-top:20px;
     font-weight: 500px;
   }

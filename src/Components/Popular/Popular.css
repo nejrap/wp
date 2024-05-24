@@ -24,11 +24,12 @@
 }
 
 .instagram-post img {
-    width: 250px;
-    height: 250px; /* Dodajte fiksnu visinu */
+    width: 200px;
+    height: 200px; /* Dodajte fiksnu visinu */
     border-radius: 4px;
     object-fit: cover; /* Osigurava da slika bude obrezana kako bi se uklopila u okvir */
     transition: none; /* Uklanja efekt prelaska miša */
+    margin-right: 20px;
 }
 
 .instagram-post:hover img {

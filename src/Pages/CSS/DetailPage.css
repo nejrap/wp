@@ -1,19 +1,109 @@
+/* CSS/DetailPage.css */
+
 .detail-page {
-    padding: 20px;
-    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
 }
 
-.detail-page img {
+.detail-image {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.detail-image img {
     max-width: 100%;
     height: auto;
 }
 
-.detail-page h1 {
-    margin-top: 20px;
-    font-size: 2em;
+.detail-info {
+    flex: 2;
 }
 
-.detail-page p {
-    margin-top: 10px;
-    font-size: 1.2em;
+.detail-info h1 {
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.detail-rating {
+    margin-bottom: 10px;
+}
+
+.fa-star {
+    color: gold;
+}
+
+.checked {
+    color: gold;
+}
+
+.detail-menu {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.detail-menu-item {
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+.detail-menu-item.active {
+    font-weight: bold;
+    border-bottom: 2px solid #333;
+}
+
+.detail-section {
+    margin-bottom: 20px;
+}
+
+.detail-section h2 {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.detail-section p {
+    font-size: 16px;
+}
+/* Stilizacija za modalni prozor */
+.react-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Transparentna pozadina */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.react-modal-content {
+    background-color: #fff; /* Boja pozadine */
+    padding: 20px; /* Prostorni razmak oko sadržaja */
+    max-width: 80%; /* Maksimalna širina modalnog prozora */
+    max-height: 80%; /* Maksimalna visina modalnog prozora */
+    overflow: auto; /* Omogućava klizanje ako je sadržaj prevelik */
+    border-radius: 5px; /* Zaobljeni rubovi */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Senka */
+}
+
+/* Stilizacija za sliku unutar modalnog prozora */
+.react-modal-content img {
+    max-width: 100%; /* Maksimalna širina slike */
+    height: auto; /* Automatska visina */
+}
+
+/* Stilizacija za taster za zatvaranje modalnog prozora */
+.react-modal-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    color: #666; /* Boja teksta */
 }

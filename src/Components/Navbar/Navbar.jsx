@@ -12,7 +12,8 @@ const Navbar = () => {
         <div className="header">
             <div className="nav">
                 <div>
-                    <img src={logo} height="100" width="100" alt="logo" />
+                <img src={logo} height="100" width="100" alt="logo" style={{ marginleft: '10px' }} />
+
                 </div>
 
                 <div className="nav-links">
