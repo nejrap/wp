@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './Components/Navbar/Navbar';
@@ -7,10 +9,16 @@ import Shop from './Pages/Shop';
 import Home from './Pages/Home';
 import DetailPage from './Pages/DetailPage';
 import Contact from './Pages/Contact';
-import LoginSignup from './Pages/LoginSignup';
+import Signup from './Pages/LoginSignup';
+import LoginPage from './Pages/LoginPage';
+
+
+
+
 
 
 const App = () => {
+    const [korisnik, setKorisnika ] = useState('');
     return (
         <Router>
             <div className="app">
@@ -21,7 +29,9 @@ const App = () => {
                     <Route path="/contact" element={<Contact />} />
                     <Route path="/shop" element={<Shop />} />
                     <Route path="/details/:id" element={<DetailPage />} />
-                    <Route path="/login" element={<LoginSignup />} />
+                    <Route path="/register" element={<Signup />} />
+                    <Route path="/login" element={<LoginPage />} />
+
                  
                 </Routes>
                 
