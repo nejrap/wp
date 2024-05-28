@@ -7,6 +7,7 @@ const Item = (props) => {
         <div className="item">
             <Link to={`/details/${props.id}`}>
                 <img src={props.image} alt={props.name} />
+                <p>{props.naslov_djela}</p>
                 <p>{props.cijena} BAM</p>
             </Link>
         </div>

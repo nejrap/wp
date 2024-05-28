@@ -50,7 +50,7 @@ function Signup(props) {
 
     password.current.value = "";
  
-    navigate(`/home`);
+    navigate(`/login`);
 
 
     }
@@ -69,7 +69,9 @@ function Signup(props) {
 
                 </div>
                 <button onClick={() => {registrujSe()}}>Registruj se</button>
-                <p className='loginsignup-login'>Imaš account? <span> Prijavi se</span></p>
+                <p className='loginsignup-login'>
+                Imaš account? <span onClick={() => navigate('/login')}>Prijavi se</span>
+                </p>
 
             </div>
             

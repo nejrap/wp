@@ -11,7 +11,7 @@ import DetailPage from './Pages/DetailPage';
 import Contact from './Pages/Contact';
 import Signup from './Pages/LoginSignup';
 import LoginPage from './Pages/LoginPage';
-
+import CartItems from './Components/CartItems/CartItems';
 
 
 
@@ -31,6 +31,7 @@ const App = () => {
                     <Route path="/details/:id" element={<DetailPage />} />
                     <Route path="/register" element={<Signup />} />
                     <Route path="/login" element={<LoginPage />} />
+                    <Route path="/cart" element={<CartItems />} />
 
                  
                 </Routes>

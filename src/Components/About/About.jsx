@@ -6,6 +6,7 @@ import './About.css'
 function About() {
     return (
         <div className="about-container">
+            <br></br>
             <h1>O nama</h1>
             <br /><br /><br />
             <img id="onama2" src={ja2} alt="Ja" />

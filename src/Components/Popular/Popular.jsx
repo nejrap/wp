@@ -13,6 +13,7 @@ const Popular = () => {
                             key={i} 
                             id={item.id} 
                             name={item.naziv_umjetnika}
+                            naslov_djela={item.naslov_djela}
                             image={item.image} 
                             cijena={item.cijena} 
                             tehnika={item.tehnika} 
