@@ -15,8 +15,6 @@ import CartItems from './Components/CartItems/CartItems';
 
 
 
-
-
 const App = () => {
     const [korisnik, setKorisnika ] = useState('');
     return (
@@ -28,6 +26,7 @@ const App = () => {
                     <Route path="/about" element={<About />} />
                     <Route path="/contact" element={<Contact />} />
                     <Route path="/shop" element={<Shop />} />
+                  
                     <Route path="/details/:id" element={<DetailPage />} />
                     <Route path="/register" element={<Signup />} />
                     <Route path="/login" element={<LoginPage />} />

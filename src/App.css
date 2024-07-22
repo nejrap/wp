@@ -1,5 +1,23 @@
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
 .App {
   text-align: center;
+  width: 100%;
+  max-width: 100%;
+  padding: 20px;
 }
 
 .App-logo {
@@ -22,6 +40,11 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 .App-link {
@@ -34,5 +57,47 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.content {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .App-header {
+    font-size: calc(8px + 2vmin);
+  }
+  
+  .App {
+    padding: 10px;
+  }
+
+  .content {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .App-header {
+    font-size: calc(6px + 2vmin);
+  }
+  
+  .App {
+    padding: 5px;
+  }
+
+  .content {
+    padding: 5px;
   }
 }

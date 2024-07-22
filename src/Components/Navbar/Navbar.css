@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap');
 
+@media(max-width:1280px){
+    .header{
+       padding: 12px 50px; 
+    }
+}
+
+
+
 .nav {
     display: flex;
     padding: 20px 60px;

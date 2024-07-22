@@ -1,15 +1,13 @@
-/* eslint-disable no-undef */
-/* eslint-disable default-case */
 import React, { useState } from "react";
 import "./CSS/LoginSignup.css";
 import { useNavigate } from "react-router-dom";
 
 const INITIAL_USER_INFO = {
-  name: "",
+  firstName: "",
   lastName: "",
   email: "",
   userName: "",
-  password: "",
+  passwordHash: "",
 };
 
 const Signup = (props) => {
@@ -22,36 +20,46 @@ const Signup = (props) => {
   };
 
   const validateForm = () => {
-    const { name, lastName, email, userName, password } = userInfo;
+    const { firstName, lastName, email, userName, passwordHash } = userInfo;
     const errors = [];
-    if (!name) errors.push("No name");
+    if (!firstName) errors.push("No name");
     if (!lastName) errors.push("No lastname");
     if (!email) errors.push("No email");
     if (!userName) errors.push("No username");
-    if (!password) errors.push("No password");
+    if (!passwordHash) errors.push("No password");
 
-    if (errors.length) alert(errors.join(", "));
-
-    setErrors(errors);
+    if (errors.length) {
+      alert(errors.join(", "));
+      setErrors(errors); // Set errors state to show errors in UI
+    } else {
+      setErrors([]); // Clear errors state if no errors
+    }
   };
 
   const registrujSe = async () => {
     validateForm();
-    if (errors.length) return;
+    if (errors.length) return; // Stop registration if there are errors
 
-    await fetch(`https://localhost:7123/api/Login/dodajKorisnika`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(userInfo),
-    })
-      .then(() => {
-        setErrors([]);
-        setUserInfo(INITIAL_USER_INFO);
-        navigate(`/login`);
-      })
-      .catch((err) => alert(err));
+    try {
+      const response = await fetch(`https://localhost:7123/api/Login/DodajKorisnika`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(userInfo)
+      });
+
+      if (response.ok) {
+        alert("Korisnik uspješno registrovan!");
+        setUserInfo(INITIAL_USER_INFO); // Reset form fields after successful registration
+        navigate(`/login`); // Redirect to login page after registration
+      } else {
+        alert("Neuspješna registracija. Molimo pokušajte ponovo.");
+      }
+    } catch (error) {
+      console.error("Greška prilikom registracije:", error);
+      alert("Greška prilikom registracije. Molimo pokušajte ponovo.");
+    }
   };
 
   return (
@@ -62,8 +70,8 @@ const Signup = (props) => {
           <input
             type="text"
             placeholder="Ime"
-            value={userInfo.name}
-            onChange={(e) => onChangeHandler("name", e.target.value)}
+            value={userInfo.firstName}
+            onChange={(e) => onChangeHandler("firstName", e.target.value)}
           />
           <input
             type="text"
@@ -86,8 +94,8 @@ const Signup = (props) => {
           <input
             type="password"
             placeholder="Password"
-            value={userInfo.password}
-            onChange={(e) => onChangeHandler("password", e.target.value)}
+            value={userInfo.passwordHash}
+            onChange={(e) => onChangeHandler("passwordHash", e.target.value)}
           />
         </div>
         <button onClick={registrujSe}>Registruj se</button>

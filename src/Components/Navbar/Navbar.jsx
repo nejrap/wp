@@ -3,7 +3,6 @@ import './Navbar.css';
 import logo from '../Assets/crna.png';
 import { Link } from 'react-router-dom';
 import cart_icon from '../Assets/cart_icon.png';
-import Popular from '../Popular/Popular';
 import { ShopContext } from '../Context/ShopContext';
 
 const Navbar = () => {
@@ -31,6 +30,7 @@ const Navbar = () => {
                         <li onClick={() => { setMenu("shop") }}>
                             <Link to='/shop'>Shop</Link>{menu === "shop" ? <hr /> : <></>}
                         </li>
+                      
                     </ul>
                 </div>
                 <div className='login-cart'>
